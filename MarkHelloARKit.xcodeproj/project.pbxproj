@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5B20A232115994B00898C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A222115994B00898C5A /* AppDelegate.swift */; };
+		F5B20A252115994B00898C5A /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A242115994B00898C5A /* art.scnassets */; };
+		F5B20A272115994B00898C5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A262115994B00898C5A /* ViewController.swift */; };
+		F5B20A2A2115994B00898C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A282115994B00898C5A /* Main.storyboard */; };
+		F5B20A2C2115994C00898C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A2B2115994C00898C5A /* Assets.xcassets */; };
+		F5B20A2F2115994C00898C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A2D2115994C00898C5A /* LaunchScreen.storyboard */; };
+		F5B20A3A2115994D00898C5A /* MarkHelloARKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A392115994D00898C5A /* MarkHelloARKitTests.swift */; };
+		F5B20A452115994D00898C5A /* MarkHelloARKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A442115994D00898C5A /* MarkHelloARKitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5B20A362115994D00898C5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B20A172115994B00898C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B20A1E2115994B00898C5A;
+			remoteInfo = MarkHelloARKit;
+		};
+		F5B20A412115994D00898C5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5B20A172115994B00898C5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5B20A1E2115994B00898C5A;
+			remoteInfo = MarkHelloARKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5B20A1F2115994B00898C5A /* MarkHelloARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkHelloARKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B20A222115994B00898C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5B20A242115994B00898C5A /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		F5B20A262115994B00898C5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F5B20A292115994B00898C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5B20A2B2115994C00898C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5B20A2E2115994C00898C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5B20A302115994D00898C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B20A352115994D00898C5A /* MarkHelloARKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkHelloARKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B20A392115994D00898C5A /* MarkHelloARKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkHelloARKitTests.swift; sourceTree = "<group>"; };
+		F5B20A3B2115994D00898C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B20A402115994D00898C5A /* MarkHelloARKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkHelloARKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B20A442115994D00898C5A /* MarkHelloARKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkHelloARKitUITests.swift; sourceTree = "<group>"; };
+		F5B20A462115994D00898C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5B20A1C2115994B00898C5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B20A322115994D00898C5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B20A3D2115994D00898C5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5B20A162115994B00898C5A = {
+			isa = PBXGroup;
+			children = (
+				F5B20A212115994B00898C5A /* MarkHelloARKit */,
+				F5B20A382115994D00898C5A /* MarkHelloARKitTests */,
+				F5B20A432115994D00898C5A /* MarkHelloARKitUITests */,
+				F5B20A202115994B00898C5A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5B20A202115994B00898C5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5B20A1F2115994B00898C5A /* MarkHelloARKit.app */,
+				F5B20A352115994D00898C5A /* MarkHelloARKitTests.xctest */,
+				F5B20A402115994D00898C5A /* MarkHelloARKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5B20A212115994B00898C5A /* MarkHelloARKit */ = {
+			isa = PBXGroup;
+			children = (
+				F5B20A222115994B00898C5A /* AppDelegate.swift */,
+				F5B20A242115994B00898C5A /* art.scnassets */,
+				F5B20A262115994B00898C5A /* ViewController.swift */,
+				F5B20A282115994B00898C5A /* Main.storyboard */,
+				F5B20A2B2115994C00898C5A /* Assets.xcassets */,
+				F5B20A2D2115994C00898C5A /* LaunchScreen.storyboard */,
+				F5B20A302115994D00898C5A /* Info.plist */,
+			);
+			path = MarkHelloARKit;
+			sourceTree = "<group>";
+		};
+		F5B20A382115994D00898C5A /* MarkHelloARKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5B20A392115994D00898C5A /* MarkHelloARKitTests.swift */,
+				F5B20A3B2115994D00898C5A /* Info.plist */,
+			);
+			path = MarkHelloARKitTests;
+			sourceTree = "<group>";
+		};
+		F5B20A432115994D00898C5A /* MarkHelloARKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5B20A442115994D00898C5A /* MarkHelloARKitUITests.swift */,
+				F5B20A462115994D00898C5A /* Info.plist */,
+			);
+			path = MarkHelloARKitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5B20A1E2115994B00898C5A /* MarkHelloARKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B20A492115994D00898C5A /* Build configuration list for PBXNativeTarget "MarkHelloARKit" */;
+			buildPhases = (
+				F5B20A1B2115994B00898C5A /* Sources */,
+				F5B20A1C2115994B00898C5A /* Frameworks */,
+				F5B20A1D2115994B00898C5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarkHelloARKit;
+			productName = MarkHelloARKit;
+			productReference = F5B20A1F2115994B00898C5A /* MarkHelloARKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5B20A342115994D00898C5A /* MarkHelloARKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B20A4C2115994D00898C5A /* Build configuration list for PBXNativeTarget "MarkHelloARKitTests" */;
+			buildPhases = (
+				F5B20A312115994D00898C5A /* Sources */,
+				F5B20A322115994D00898C5A /* Frameworks */,
+				F5B20A332115994D00898C5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5B20A372115994D00898C5A /* PBXTargetDependency */,
+			);
+			name = MarkHelloARKitTests;
+			productName = MarkHelloARKitTests;
+			productReference = F5B20A352115994D00898C5A /* MarkHelloARKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5B20A3F2115994D00898C5A /* MarkHelloARKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B20A4F2115994D00898C5A /* Build configuration list for PBXNativeTarget "MarkHelloARKitUITests" */;
+			buildPhases = (
+				F5B20A3C2115994D00898C5A /* Sources */,
+				F5B20A3D2115994D00898C5A /* Frameworks */,
+				F5B20A3E2115994D00898C5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5B20A422115994D00898C5A /* PBXTargetDependency */,
+			);
+			name = MarkHelloARKitUITests;
+			productName = MarkHelloARKitUITests;
+			productReference = F5B20A402115994D00898C5A /* MarkHelloARKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5B20A172115994B00898C5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Mark Feng";
+				TargetAttributes = {
+					F5B20A1E2115994B00898C5A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					F5B20A342115994D00898C5A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = F5B20A1E2115994B00898C5A;
+					};
+					F5B20A3F2115994D00898C5A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = F5B20A1E2115994B00898C5A;
+					};
+				};
+			};
+			buildConfigurationList = F5B20A1A2115994B00898C5A /* Build configuration list for PBXProject "MarkHelloARKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5B20A162115994B00898C5A;
+			productRefGroup = F5B20A202115994B00898C5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5B20A1E2115994B00898C5A /* MarkHelloARKit */,
+				F5B20A342115994D00898C5A /* MarkHelloARKitTests */,
+				F5B20A3F2115994D00898C5A /* MarkHelloARKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5B20A1D2115994B00898C5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B20A252115994B00898C5A /* art.scnassets in Resources */,
+				F5B20A2F2115994C00898C5A /* LaunchScreen.storyboard in Resources */,
+				F5B20A2C2115994C00898C5A /* Assets.xcassets in Resources */,
+				F5B20A2A2115994B00898C5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B20A332115994D00898C5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B20A3E2115994D00898C5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5B20A1B2115994B00898C5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B20A272115994B00898C5A /* ViewController.swift in Sources */,
+				F5B20A232115994B00898C5A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B20A312115994D00898C5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B20A3A2115994D00898C5A /* MarkHelloARKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B20A3C2115994D00898C5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5B20A452115994D00898C5A /* MarkHelloARKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5B20A372115994D00898C5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B20A1E2115994B00898C5A /* MarkHelloARKit */;
+			targetProxy = F5B20A362115994D00898C5A /* PBXContainerItemProxy */;
+		};
+		F5B20A422115994D00898C5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5B20A1E2115994B00898C5A /* MarkHelloARKit */;
+			targetProxy = F5B20A412115994D00898C5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5B20A282115994B00898C5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5B20A292115994B00898C5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5B20A2D2115994C00898C5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5B20A2E2115994C00898C5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5B20A472115994D00898C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5B20A482115994D00898C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5B20A4A2115994D00898C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX3WN9JUHM;
+				INFOPLIST_FILE = MarkHelloARKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.MarkHelloARKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5B20A4B2115994D00898C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX3WN9JUHM;
+				INFOPLIST_FILE = MarkHelloARKit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.MarkHelloARKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5B20A4D2115994D00898C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX3WN9JUHM;
+				INFOPLIST_FILE = MarkHelloARKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.MarkHelloARKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkHelloARKit.app/MarkHelloARKit";
+			};
+			name = Debug;
+		};
+		F5B20A4E2115994D00898C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX3WN9JUHM;
+				INFOPLIST_FILE = MarkHelloARKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.MarkHelloARKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarkHelloARKit.app/MarkHelloARKit";
+			};
+			name = Release;
+		};
+		F5B20A502115994D00898C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX3WN9JUHM;
+				INFOPLIST_FILE = MarkHelloARKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.MarkHelloARKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarkHelloARKit;
+			};
+			name = Debug;
+		};
+		F5B20A512115994D00898C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XX3WN9JUHM;
+				INFOPLIST_FILE = MarkHelloARKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mark.MarkHelloARKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MarkHelloARKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5B20A1A2115994B00898C5A /* Build configuration list for PBXProject "MarkHelloARKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B20A472115994D00898C5A /* Debug */,
+				F5B20A482115994D00898C5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B20A492115994D00898C5A /* Build configuration list for PBXNativeTarget "MarkHelloARKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B20A4A2115994D00898C5A /* Debug */,
+				F5B20A4B2115994D00898C5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B20A4C2115994D00898C5A /* Build configuration list for PBXNativeTarget "MarkHelloARKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B20A4D2115994D00898C5A /* Debug */,
+				F5B20A4E2115994D00898C5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B20A4F2115994D00898C5A /* Build configuration list for PBXNativeTarget "MarkHelloARKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B20A502115994D00898C5A /* Debug */,
+				F5B20A512115994D00898C5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5B20A172115994B00898C5A /* Project object */;
+}
