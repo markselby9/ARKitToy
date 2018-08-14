@@ -15,6 +15,8 @@
 		F5B20A2F2115994C00898C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A2D2115994C00898C5A /* LaunchScreen.storyboard */; };
 		F5B20A3A2115994D00898C5A /* MarkHelloARKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A392115994D00898C5A /* MarkHelloARKitTests.swift */; };
 		F5B20A452115994D00898C5A /* MarkHelloARKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A442115994D00898C5A /* MarkHelloARKitUITests.swift */; };
+		F5B20A5321230C6D00898C5A /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A5221230C6D00898C5A /* OverlayPlane.swift */; };
+		F5B20A5521230CA500898C5A /* overlay_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A5421230CA500898C5A /* overlay_grid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F5B20A402115994D00898C5A /* MarkHelloARKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkHelloARKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5B20A442115994D00898C5A /* MarkHelloARKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkHelloARKitUITests.swift; sourceTree = "<group>"; };
 		F5B20A462115994D00898C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B20A5221230C6D00898C5A /* OverlayPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
+		F5B20A5421230CA500898C5A /* overlay_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_grid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 		F5B20A212115994B00898C5A /* MarkHelloARKit */ = {
 			isa = PBXGroup;
 			children = (
+				F5B20A5421230CA500898C5A /* overlay_grid.png */,
 				F5B20A222115994B00898C5A /* AppDelegate.swift */,
 				F5B20A242115994B00898C5A /* art.scnassets */,
 				F5B20A262115994B00898C5A /* ViewController.swift */,
 				F5B20A282115994B00898C5A /* Main.storyboard */,
+				F5B20A5221230C6D00898C5A /* OverlayPlane.swift */,
 				F5B20A2B2115994C00898C5A /* Assets.xcassets */,
 				F5B20A2D2115994C00898C5A /* LaunchScreen.storyboard */,
 				F5B20A302115994D00898C5A /* Info.plist */,
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B20A252115994B00898C5A /* art.scnassets in Resources */,
+				F5B20A5521230CA500898C5A /* overlay_grid.png in Resources */,
 				F5B20A2F2115994C00898C5A /* LaunchScreen.storyboard in Resources */,
 				F5B20A2C2115994C00898C5A /* Assets.xcassets in Resources */,
 				F5B20A2A2115994B00898C5A /* Main.storyboard in Resources */,
@@ -261,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B20A272115994B00898C5A /* ViewController.swift in Sources */,
+				F5B20A5321230C6D00898C5A /* OverlayPlane.swift in Sources */,
 				F5B20A232115994B00898C5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

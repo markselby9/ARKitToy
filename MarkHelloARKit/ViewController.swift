@@ -13,13 +13,16 @@ import ARKit
 enum PhysicsCategory : Int{
     case box = 1
     case plane = 2
+    case car = 3
 }
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     private let textLabel :UILabel = UILabel()
+    private var carNode :SCNNode!
     var boxes = [SCNNode]()
+    var planes = [OverlayPlane]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +47,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene = scene
         
         let carScene = SCNScene(named: "art.scnassets/car.dae")
-        let carNode = carScene?.rootNode.childNode(withName: "car", recursively: true)
-        carNode?.position = SCNVector3(0, 0, 0.5)
-        scene.rootNode.addChildNode(carNode!)
+//        car model comes from https://poly.google.com/view/7bF7UVAoYRG
+        self.carNode = carScene?.rootNode.childNode(withName: "car", recursively: true)
+        carNode?.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+        carNode?.physicsBody?.categoryBitMask = PhysicsCategory.car.rawValue
         
         _registerGesture()
+        _addControlPanel()
     }
     
     private func _registerGesture() {
@@ -60,6 +65,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView.addGestureRecognizer(singleTapRecognizer)
     }
     
+    private func _addControlPanel() {
+        let leftButton = UIButton(frame: CGRect(x: 30, y: self.sceneView.frame.height - 100, width: 80, height: 80))
+        leftButton.setTitle("Left", for: .normal)
+        leftButton.backgroundColor = UIColor.blue
+        let rightButton = UIButton(frame: CGRect(x: 150, y: self.sceneView.frame.height - 100, width: 80, height: 80))
+        rightButton.setTitle("Right", for: .normal)
+        rightButton.backgroundColor = UIColor.blue
+        let goButton = UIButton(frame: CGRect(x: 270, y: self.sceneView.frame.height - 100, width: 80, height: 80))
+        goButton.setTitle("GOGOGO", for: .normal)
+        goButton.backgroundColor = UIColor.red
+        
+        self.sceneView.addSubview(leftButton)
+        self.sceneView.addSubview(rightButton)
+        self.sceneView.addSubview(goButton)
+    }
+    
     @objc func tappedFunc(recognizer :UIGestureRecognizer) {
         let sceneView = recognizer.view as! ARSCNView
         let touchLocation = recognizer.location(in: sceneView)
@@ -68,6 +89,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if !hitTestResult.isEmpty {
             guard let hitResult = hitTestResult.first else {return}
             addBox(hitResult: hitResult)
+            addCar(hitResult: hitResult)
         }
     }
 
@@ -84,8 +106,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         self.boxes.append(boxNode)
         
-        boxNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y + Float(box.height/2), hitResult.worldTransform.columns.3.z)
+        boxNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y + Float(box.height)*2, hitResult.worldTransform.columns.3.z)
         self.sceneView.scene.rootNode.addChildNode(boxNode)
+    }
+    
+    @objc func addCar(hitResult :ARHitTestResult) {
+        self.carNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y + 0.1, hitResult.worldTransform.columns.3.z)
+        self.sceneView.scene.rootNode.addChildNode(self.carNode)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -113,6 +140,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - ARSCNViewDelegate
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard anchor is ARPlaneAnchor else {
+            return
+        }
+        let plane = OverlayPlane(anchor: anchor as! ARPlaneAnchor)
+        self.planes.append(plane)
+        node.addChildNode(plane)
+        
         DispatchQueue.main.async {
             self.textLabel.text = "New plane detected"
             UIView.animate(withDuration: 3, animations: {
@@ -121,6 +155,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.textLabel.alpha = 0.0
             }
         }
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        
+        let plane = self.planes.filter { plane in
+            return plane.anchor.identifier == anchor.identifier
+            }.first
+        
+        if plane == nil {
+            return
+        }
+        
+        plane?.update(anchor: anchor as! ARPlaneAnchor)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
