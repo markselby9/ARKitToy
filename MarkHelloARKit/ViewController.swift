@@ -16,11 +16,17 @@ enum PhysicsCategory : Int{
     case car = 3
 }
 
+enum SelectedButtonType: Int {
+    case Left
+    case Right
+    case Go
+}
+
 class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     private let textLabel :UILabel = UILabel()
-    private var carNode :SCNNode!
+    private var car :Car!
     var boxes = [SCNNode]()
     var planes = [OverlayPlane]()
     
@@ -46,11 +52,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         sceneView.scene = scene
         
-        let carScene = SCNScene(named: "art.scnassets/car.dae")
+        let carScene = SCNScene(named: "art.scnassets/car2.dae")
 //        car model comes from https://poly.google.com/view/7bF7UVAoYRG
-        self.carNode = carScene?.rootNode.childNode(withName: "car", recursively: true)
-        carNode?.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
-        carNode?.physicsBody?.categoryBitMask = PhysicsCategory.car.rawValue
+        guard let carNode = carScene?.rootNode.childNode(withName: "car", recursively: true) else {
+            return
+        }
+        self.car = Car(node: carNode)
         
         _registerGesture()
         _addControlPanel()
@@ -66,20 +73,50 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     private func _addControlPanel() {
-        let leftButton = UIButton(frame: CGRect(x: 30, y: self.sceneView.frame.height - 100, width: 80, height: 80))
+        let leftButton = GameButton(frame: CGRect(x: 10, y: self.sceneView.frame.height - 100, width: 50, height: 50)) {
+            self.car.turnLeft()
+        }
         leftButton.setTitle("Left", for: .normal)
         leftButton.backgroundColor = UIColor.blue
-        let rightButton = UIButton(frame: CGRect(x: 150, y: self.sceneView.frame.height - 100, width: 80, height: 80))
+        let rightButton = GameButton(frame: CGRect(x: 70, y: self.sceneView.frame.height - 100, width: 50, height: 50)) {
+            self.car.turnRight()
+        }
         rightButton.setTitle("Right", for: .normal)
         rightButton.backgroundColor = UIColor.blue
-        let goButton = UIButton(frame: CGRect(x: 270, y: self.sceneView.frame.height - 100, width: 80, height: 80))
+        let goButton = GameButton(frame: CGRect(x: 130, y: self.sceneView.frame.height - 100, width: 50, height: 50)) {
+            self.car.go()
+        }
         goButton.setTitle("GOGOGO", for: .normal)
         goButton.backgroundColor = UIColor.red
+        let backButton = GameButton(frame: CGRect(x: 190, y: self.sceneView.frame.height - 100, width: 50, height: 50)) {
+            self.car.back()
+        }
+        backButton.setTitle("Back", for: .normal)
+        backButton.backgroundColor = UIColor.red
+        
+//        leftButton.tag = SelectedButtonType.Left.rawValue
+//        rightButton.tag = SelectedButtonType.Right.rawValue
+//        goButton.tag = SelectedButtonType.Go.rawValue
+//        backButton.tag = SelectedButtonType.Back.rawValue
         
         self.sceneView.addSubview(leftButton)
         self.sceneView.addSubview(rightButton)
         self.sceneView.addSubview(goButton)
+        self.sceneView.addSubview(backButton)
     }
+    
+//    @objc func pressed(sender: UIButton!) {
+//        switch sender.tag {
+//        case SelectedButtonType.Left.rawValue:
+//            print ("left")
+//        case SelectedButtonType.Right.rawValue:
+//            print ("right")
+//        case SelectedButtonType.Go.rawValue:
+//            print ("go")
+//        default:
+//            print ("default")
+//        }
+//    }
     
     @objc func tappedFunc(recognizer :UIGestureRecognizer) {
         let sceneView = recognizer.view as! ARSCNView
@@ -111,8 +148,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @objc func addCar(hitResult :ARHitTestResult) {
-        self.carNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y + 0.1, hitResult.worldTransform.columns.3.z)
-        self.sceneView.scene.rootNode.addChildNode(self.carNode)
+        self.car.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y + 0.1, hitResult.worldTransform.columns.3.z)
+        self.sceneView.scene.rootNode.addChildNode(self.car)
     }
     
     override func viewWillAppear(_ animated: Bool) {

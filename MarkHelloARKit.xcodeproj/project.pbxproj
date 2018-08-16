@@ -17,6 +17,8 @@
 		F5B20A452115994D00898C5A /* MarkHelloARKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A442115994D00898C5A /* MarkHelloARKitUITests.swift */; };
 		F5B20A5321230C6D00898C5A /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A5221230C6D00898C5A /* OverlayPlane.swift */; };
 		F5B20A5521230CA500898C5A /* overlay_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = F5B20A5421230CA500898C5A /* overlay_grid.png */; };
+		F5B20A57212593A100898C5A /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A56212593A100898C5A /* GameButton.swift */; };
+		F5B20A592125957C00898C5A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B20A582125957C00898C5A /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		F5B20A462115994D00898C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5B20A5221230C6D00898C5A /* OverlayPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
 		F5B20A5421230CA500898C5A /* overlay_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay_grid.png; sourceTree = "<group>"; };
+		F5B20A56212593A100898C5A /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
+		F5B20A582125957C00898C5A /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				F5B20A222115994B00898C5A /* AppDelegate.swift */,
 				F5B20A242115994B00898C5A /* art.scnassets */,
 				F5B20A262115994B00898C5A /* ViewController.swift */,
+				F5B20A582125957C00898C5A /* Car.swift */,
+				F5B20A56212593A100898C5A /* GameButton.swift */,
 				F5B20A282115994B00898C5A /* Main.storyboard */,
 				F5B20A5221230C6D00898C5A /* OverlayPlane.swift */,
 				F5B20A2B2115994C00898C5A /* Assets.xcassets */,
@@ -268,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5B20A272115994B00898C5A /* ViewController.swift in Sources */,
+				F5B20A57212593A100898C5A /* GameButton.swift in Sources */,
+				F5B20A592125957C00898C5A /* Car.swift in Sources */,
 				F5B20A5321230C6D00898C5A /* OverlayPlane.swift in Sources */,
 				F5B20A232115994B00898C5A /* AppDelegate.swift in Sources */,
 			);
